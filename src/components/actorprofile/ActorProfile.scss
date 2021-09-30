@@ -1,0 +1,14 @@
+.container-profile{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .span-item {
+        display: flex;
+        flex-grow: 3;
+        font-weight: bold;
+      }
+    
+}
+

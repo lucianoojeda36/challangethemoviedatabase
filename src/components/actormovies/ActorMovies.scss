@@ -1,0 +1,9 @@
+.ant-list-item{
+    display: flex;
+    flex-direction: row-reverse;
+    .ant-list-item-meta-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+}
