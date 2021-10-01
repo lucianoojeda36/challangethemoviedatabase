@@ -2,6 +2,8 @@ import { Upload, message } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import { getDataMovieDb } from '../../store/datamoviedb/DataMovieDb.action';
+import { useHistory} from 'react-router-dom';
+
 
 
 
@@ -9,6 +11,7 @@ export default function DragAndDrop() {
 
   
   const dispatch = useDispatch()
+  const history = useHistory()
 
   const { Dragger } = Upload;
 
@@ -22,13 +25,16 @@ export default function DragAndDrop() {
     onChange(info) {
       //   info ? console.log('===============>',info[0].response): console.log("no existe")
       // console.log('===============>', info.file.response ? info.file.response.actorName : "no existe")
-      dispatch(getDataMovieDb(info.file.response ? info.file.response.actorName : "no existe"))
+      // dispatch(getDataMovieDb(info.file.response ? info.file.response.actorName : "no existe"))
+      dispatch(getDataMovieDb(info.file.response?.actorName))
+      
       const { status } = info.file;
       if (status !== 'uploading') {
         console.log(info.file, info.fileList);
       }
       if (status === 'done') {
-        message.success(`${info.file.name} file uploaded successfully.`);
+        message.success(`${info.file.name} file uploaded successfully.`)
+        .then(()=>{history.push("/DashBoard");})
       } else if (status === 'error') {
         message.error(`${info.file.name} file upload failed.`);
       }

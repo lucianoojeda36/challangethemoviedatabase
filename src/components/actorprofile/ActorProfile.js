@@ -10,9 +10,9 @@ export default function ActorProfile() {
   console.log('users======>', users ? users : "uju")
 
   function generes () {
-    if(users.gender && users.gender === 0){ return <span className='span-item'>Undefeined</span>}
-    if(users.gender && users.gender === 1){ return <span className='span-item'>Mujer</span>}
-    else {return <span className='span-item'>Hombre</span>}
+    if(users.gender && users.gender === 0){ return <span className='span-item' style={{backgroundColor:'#FCF3CF'}}>Undefeined</span>}
+    if(users.gender && users.gender === 1){ return <span className='span-item' style={{backgroundColor:'#FCF3CF'}}>Mujer</span>}
+    else {return <span className='span-item' style={{backgroundColor:'#FCF3CF'}}>Hombre</span>}
   }
 
   return (

@@ -1,0 +1,19 @@
+
+.container-landing{
+    display: flex;
+    flex-direction: column;
+    .container-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 15%;
+    }
+
+    .container-pages{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+}

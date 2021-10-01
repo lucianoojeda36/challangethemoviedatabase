@@ -1,15 +1,14 @@
 import './App.css';
+import { Route } from "react-router-dom";
 import DragAndDrop from './components/draganddrop/DragAndDrop';
 import 'antd/dist/antd.css';
-import ActorProfile from './components/actorprofile/ActorProfile';
-import ActorMovies from './components/actormovies/ActorMovies';
+import DashBoard from './pages/dashboard/DashBoard';
 
 function App() {
   return (
     <div className="App">
-     <DragAndDrop/>
-     <ActorProfile/>
-     <ActorMovies/>
+      <Route exact path='/' component={DragAndDrop} />
+      <Route path='/DashBoard' component={DashBoard} />
     </div>
   );
 }
