@@ -51,6 +51,8 @@ export default function DragAndDrop() {
 
 
   return (
+    <div>
+      <h1>¿Quien es este actor?</h1>
     <Dragger {...props} className='container-dragdrop'>
       <p className="ant-upload-drag-icon">
         <InboxOutlined />
@@ -61,6 +63,7 @@ export default function DragAndDrop() {
         band files
       </p>
     </Dragger>
+    </div>
   )
 
 
