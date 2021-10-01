@@ -3,6 +3,7 @@ import { InboxOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import { getDataMovieDb } from '../../store/datamoviedb/DataMovieDb.action';
 import { useHistory} from 'react-router-dom';
+import './DragAndDrop.scss'
 
 
 
@@ -50,7 +51,7 @@ export default function DragAndDrop() {
 
 
   return (
-    <Dragger {...props}>
+    <Dragger {...props} className='container-dragdrop'>
       <p className="ant-upload-drag-icon">
         <InboxOutlined />
       </p>

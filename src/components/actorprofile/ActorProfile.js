@@ -21,6 +21,7 @@ export default function ActorProfile() {
         width={200}
         src={`https://image.tmdb.org/t/p/original/${users?.profile_path}`}
       />
+      <h1>{users.name}</h1>
       {generes()}
       <span className='span-item'>Popularidad:{users.popularity}</span>
     </div>

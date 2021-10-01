@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, Avatar, Space } from 'antd';
-import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
+import { MessageOutlined, LikeOutlined, StarFilled } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
 import { Divider } from 'antd';
 import './ActorMovies.scss'
@@ -31,12 +31,12 @@ function TimeStamp(time) {
 }
 
 
-const IconText = ({ icon, text }) => (
-    <Space>
-        {React.createElement(icon)}
-        {text}
-    </Space>
-);
+// const IconText = ({ icon, text }) => (
+//     <Space>
+//         {text}
+//         {React.createElement(icon)}
+//     </Space>
+// );
 
 export default function ActorMovies() {
 
@@ -51,34 +51,37 @@ export default function ActorMovies() {
                     console.log(page);
                 },
                 pageSize: 3,
+                
             }}
+        
             dataSource={users?.known_for}
             header={
                 <div>
                     <h1 style={{display:'flex',justifyContent:'flex-start',fontWeight:'bold',fontSize:'40px'}}>Pelicuals:</h1>
                 </div>
             }
-            footer={
-                <div>
-                    <b>ant design</b> footer part
-                </div>
-            }
+            // footer={
+            //     <div>
+            //         <b>ant design</b> footer part
+            //     </div>
+            // }
             renderItem={item => (
                 <div>
                     
                 <div className='text-content'>
                 <h1 className='text-title' >{item?.title}</h1>
                 <div className='text-icon'>
-                <IconText  icon={StarOutlined} text={`${item?.vote_average}/10`} key="list-vertical-star-o" />
+                    <span>{item?.vote_average}/10</span>
+                    <StarFilled style={{ fontSize: '16px', color: '#D4AC0D' }}/>
                 </div>
                 </div>
                 
                 <List.Item        
                     key={item.id}
-                    actions={[
-                        <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
-                        <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
-                    ]}
+                    // actions={[
+                    //     <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
+                    //     <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
+                    // ]}
                     extra={
                         <img
                         // style={{}}

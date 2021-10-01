@@ -4,7 +4,7 @@ import ActorProfile from '../../components/actorprofile/ActorProfile';
 import { Button } from 'antd';
 import './LandingPage.scss'
 import {
-    ArrowLeftOutlined,SearchOutlined
+    ArrowLeftOutlined,
   } from '@ant-design/icons';
 
 
