@@ -3,9 +3,7 @@ import ActorMovies from '../../components/actormovies/ActorMovies';
 import ActorProfile from '../../components/actorprofile/ActorProfile';
 import { Button } from 'antd';
 import './LandingPage.scss'
-import {
-    ArrowLeftOutlined,
-  } from '@ant-design/icons';
+import {ArrowLeftOutlined} from '@ant-design/icons';
 
 
 

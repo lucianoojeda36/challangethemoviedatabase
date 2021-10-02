@@ -3,7 +3,7 @@ import { InboxOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import { getDataMovieDb } from '../../store/datamoviedb/DataMovieDb.action';
 import { useHistory} from 'react-router-dom';
-import './DragAndDrop.scss'
+
 
 
 
@@ -24,9 +24,6 @@ export default function DragAndDrop() {
       Nomada: 'NGQ2NDY3MDUtMTgxNC00Njk0LWJjNmEtZjczZWNkODJlNDE3',
     },
     onChange(info) {
-      //   info ? console.log('===============>',info[0].response): console.log("no existe")
-      // console.log('===============>', info.file.response ? info.file.response.actorName : "no existe")
-      // dispatch(getDataMovieDb(info.file.response ? info.file.response.actorName : "no existe"))
       dispatch(getDataMovieDb(info.file.response?.actorName))
       
       const { status } = info.file;
@@ -41,7 +38,6 @@ export default function DragAndDrop() {
       }
     },
     onDrop(e) {
-      //   console.log("ondrop======>",e)
       console.log('Dropped files', e.dataTransfer.files);
     },
   };
