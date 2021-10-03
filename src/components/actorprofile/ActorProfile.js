@@ -6,8 +6,6 @@ import "./ActorProfile.scss";
 export default function ActorProfile() {
   const users = useSelector((state) => state.dataReducer?.user);
 
-  console.log("users======>", users ? users : "uju");
-
   function generes() {
     if (users.gender && users.gender === 0) {
       return (
@@ -39,7 +37,7 @@ export default function ActorProfile() {
       />
       <h1>{users.name}</h1>
       {generes()}
-      <span className="span-item">Popularidad:{users.popularity}</span>
+      <span className="span-item">Popularidad: {users.popularity}</span>
     </div>
   );
 }
