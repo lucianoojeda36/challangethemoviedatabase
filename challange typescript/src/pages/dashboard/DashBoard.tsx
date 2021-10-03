@@ -24,7 +24,7 @@ export default function DashBoard() {
     (state: dataStateInfo) => state.dataReducer?.isLoading
   );
 
-  if (users.length === 0) {
+  if ( users && users.length === 0) {
     return <h1>No results</h1>;
   } else if (isLoading === false) {
     return <h1>Loading...</h1>;
