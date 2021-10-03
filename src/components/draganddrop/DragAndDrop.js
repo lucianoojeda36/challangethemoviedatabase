@@ -1,8 +1,10 @@
 import { Upload, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
+import {apiKey_nomada} from '../../api/config'
 import { getDataMovieDb } from "../../store/datamoviedb/DataMovieDb.action";
 import { useHistory } from "react-router-dom";
+
 
 export default function DragAndDrop() {
   const dispatch = useDispatch();
@@ -12,10 +14,10 @@ export default function DragAndDrop() {
 
   const props = {
     name: "file",
-    multiple: true,
+    multiple: false,
     action: "https://whois.nomada.cloud/upload",
     headers: {
-      Nomada: "NGQ2NDY3MDUtMTgxNC00Njk0LWJjNmEtZjczZWNkODJlNDE3",
+      Nomada: apiKey_nomada,
     },
     onChange(info) {
       dispatch(getDataMovieDb(info.file.response?.actorName));

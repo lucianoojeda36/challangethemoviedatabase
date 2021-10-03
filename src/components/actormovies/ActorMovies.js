@@ -34,6 +34,7 @@ export default function ActorMovies() {
               justifyContent: "flex-start",
               fontWeight: "bold",
               fontSize: "40px",
+              marginLeft: "65px"
             }}
           >
             Pelicuals:
@@ -70,12 +71,21 @@ export default function ActorMovies() {
                     textAlign: "left",
                   }}
                 >
-                  {item?.overview ? item?.overview : <span>without overview</span>}
+                  {item?.overview ? (
+                    item?.overview
+                  ) : (
+                    <span>without overview</span>
+                  )}
                 </span>
               }
             />
             <span className="timestamps">
-              Fecha de Estreno:{TimeStamp(item.release_date) ? TimeStamp(item.release_date) : <span>without release date</span>}
+              Fecha de Estreno:
+              {TimeStamp(item.release_date) ? (
+                TimeStamp(item.release_date)
+              ) : (
+                <span>without release date</span>
+              )}
             </span>
           </List.Item>
           <Divider style={{ background: "black", opacity: "0.2" }} />

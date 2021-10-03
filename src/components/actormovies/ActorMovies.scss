@@ -1,68 +1,69 @@
-.ant-list-item{
-    display: flex;
-    flex-direction: row-reverse;
-    border-bottom: none;
-    
-    .ant-list-item-main{
-        flex-direction: column;
-        margin: 10px;
+.ant-list-item {
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: none;
+  // .ant-list-item-extra{
 
-        .timestamps{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            font-weight: bold;
-        }
+  //     img{
+  //         display: flex;
+  //         flex-direction: row;
+  //         justify-content: flex-start;
+  //         align-items: center;
+
+  //     }
+
+  // }
+
+  .ant-list-item-main {
+    flex-direction: column;
+    margin: 10px;
+
+    .timestamps {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      font-weight: bold;
     }
-    .ant-list-item-meta-title{
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-    }
+  }
+  .ant-list-item-meta-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
 }
 
-.ant-list-split{
-    border-bottom: none;
+.ant-list-split {
+  border-bottom: none;
 }
 
 .ant-list-split .ant-list-item {
-    border-bottom: none;
+  border-bottom: none;
 }
-.ant-list{
-    display: flex;
-    flex-direction: column;
-    // flex: 3;
-    width: 80%;
-
+.ant-list {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
-.text-content{
+.text-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 65px;
+  padding-right: 10px;
+  font-weight: bold;
+
+  .text-icon {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: bold;
-    // padding: 10px;
-    // .text-title{
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: flex-start;
-
-    // }
-    .text-icon{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-
-    }
+    align-items: center;
+    gap: 10px;
+  }
 }
 
-
-.ant-list-pagination{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
+.ant-list-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
 }
