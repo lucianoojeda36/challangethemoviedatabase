@@ -1,5 +1,4 @@
-<br/> -->
-
+<br/>
   <h5 align = "left"> Challange Nomada </h5>
 
 <a href = "https://challangethemoviedatabase.vercel.app/" target = "blank"><img align = "center" src="./assets/portada.png" alt = "inst"  /></a>
