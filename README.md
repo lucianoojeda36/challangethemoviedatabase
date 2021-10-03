@@ -2,7 +2,7 @@
 
   <h5 align = "left"> Challange Nomada </h5>
 
-<a href = "https://challangethemoviedatabase.vercel.app/" target = "blank"><img align = "center" src="./assets/portada.jpg" alt = "inst"  /></a>
+<a href = "https://challangethemoviedatabase.vercel.app/" target = "blank"><img align = "center" src="./assets/portada.png" alt = "inst"  /></a>
 
 ### Summary
 
